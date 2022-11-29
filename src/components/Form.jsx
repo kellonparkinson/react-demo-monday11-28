@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Form = () => {
+const Form = (props) => {
     const [userInput, setUserInput] = useState('')
 
     const handleChange = (e) => setUserInput(e.target.value)
@@ -8,6 +8,7 @@ const Form = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log(userInput)
+        props.addTask(userInput)
         setUserInput('')
     }
 

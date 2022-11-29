@@ -1,8 +1,9 @@
+import './App.css'
 import { useState } from 'react'
 
-import './App.css'
 import Header from './components/Header'
 import Form from './components/Form'
+import List from './components/List'
 
 function App() {
   const [taskList, setTaskList] = useState([])
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Form addTask={addTask} />
+      <List tasks={taskList} />
     </div>
   )
 }
